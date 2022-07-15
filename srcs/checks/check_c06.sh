@@ -133,7 +133,7 @@ function	check_c06_ex03() {
 
 function	c06() {
 	mkdir src/c06 user_output/c06
-	print_current_part "c06"
+	print_current_part "C06"
 	cp -r $src_path/c06/ex* ./src/c06  # copying src files
 	
 	check_c06_ex00

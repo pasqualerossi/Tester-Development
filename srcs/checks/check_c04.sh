@@ -293,7 +293,7 @@ function	check_c04_ex05() {
 
 function	c04() {
 	mkdir src/c04 user_output/c04
-	print_current_part "c04"
+	print_current_part "C04"
 	cp -r $src_path/c04/ex* ./src/c04  # copying src files
 	
 	check_c04_ex00

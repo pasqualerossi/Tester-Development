@@ -3,7 +3,7 @@
 function	check_c00_ex00() {
 	usr_out=$current_dir/user_output/c00/ex00
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex00:\n${NOCOLOR}"
+	printf " ${YELLOW}ex00 - ft_putchar\n${NOCOLOR}"
 	printf "= ex00 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex00/ft_putchar.c" ; then
 		msg_nothing_turned_in "ex00/ft_putchar.c"
@@ -38,7 +38,7 @@ function	check_c00_ex00() {
 function	check_c00_ex01() {
 	usr_out=$current_dir/user_output/c00/ex01
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex01:\n${NOCOLOR}"
+	printf " ${YELLOW}ex01 - ft_print_alphabet\n${NOCOLOR}"
 	printf "= ex01 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex01/ft_print_alphabet.c" ; then
 		msg_nothing_turned_in "ex01/ft_print_alphabet.c"
@@ -72,7 +72,7 @@ function	check_c00_ex01() {
 function	check_c00_ex02() {
 	usr_out=$current_dir/user_output/c00/ex02
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex02:\n${NOCOLOR}"
+	printf " ${YELLOW}ex02 - ft_print_reserve_alphabet\n${NOCOLOR}"
 	printf "= ex02 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex02/ft_print_reverse_alphabet.c" ; then
 		msg_nothing_turned_in "ex02/ft_print_reverse_alphabet.c"
@@ -106,7 +106,7 @@ function	check_c00_ex02() {
 function	check_c00_ex03() {
 	usr_out=$current_dir/user_output/c00/ex03
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex03:\n${NOCOLOR}"
+	printf " ${YELLOW}ex03 - ft_print_numbers\n${NOCOLOR}"
 	printf "= ex03 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex03/ft_print_numbers.c" ; then
 		msg_nothing_turned_in "ex03/ft_print_numbers.c"
@@ -140,7 +140,7 @@ function	check_c00_ex03() {
 function	check_c00_ex04() {
 	usr_out=$current_dir/user_output/c00/ex04
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex04:\n${NOCOLOR}"
+	printf " ${YELLOW}ex04 - ft_is_negative\n${NOCOLOR}"
 	printf "= ex04 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex04/ft_is_negative.c" ; then
 		msg_nothing_turned_in "ex04/ft_is_negative.c"
@@ -184,7 +184,7 @@ function	check_c00_ex04() {
 function	check_c00_ex05() {
 	usr_out=$current_dir/user_output/c00/ex05
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex05:\n${NOCOLOR}"
+	printf " ${YELLOW}ex05 - ft_print_comb\n${NOCOLOR}"
 	printf "= ex05 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex05/ft_print_comb.c" ; then
 		msg_nothing_turned_in "ex05/ft_print_comb.c"
@@ -218,7 +218,7 @@ function	check_c00_ex05() {
 function	check_c00_ex06() {
 	usr_out=$current_dir/user_output/c00/ex06
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex06:\n${NOCOLOR}"
+	printf " ${YELLOW}ex06 - ft_print_comb2\n${NOCOLOR}"
 	printf "= ex06 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex06/ft_print_comb2.c" ; then
 		msg_nothing_turned_in "ex06/ft_print_comb2.c"
@@ -252,7 +252,7 @@ function	check_c00_ex06() {
 function	check_c00_ex07() {
 	usr_out=$current_dir/user_output/c00/ex07
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex07:\n${NOCOLOR}"
+	printf " ${YELLOW}ex07 - ft_putnbr\n${NOCOLOR}"
 	printf "= ex07 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex07/ft_putnbr.c" ; then
 		msg_nothing_turned_in "ex07/ft_putnbr.c"
@@ -291,7 +291,7 @@ function	check_c00_ex07() {
 
 function	c00() {
 	mkdir src/c00 user_output/c00
-	print_current_part "c00"
+	print_current_part "C00"
 	cp -r $src_path/c00/ex* ./src/c00  # copying src files
 	
 	check_c00_ex00

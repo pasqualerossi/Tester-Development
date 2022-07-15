@@ -400,7 +400,7 @@ function	check_c05_ex08() {
 
 function	c05() {
 	mkdir src/c05 user_output/c05
-	print_current_part "c05"
+	print_current_part "C05"
 	cp -r $src_path/c05/ex* ./src/c05  # copying src files
 	
 	check_c05_ex00

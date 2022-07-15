@@ -341,7 +341,7 @@ function	check_c01_ex08() {
 
 function	c01() {
 	mkdir src/c01 user_output/c01
-	print_current_part "c01"
+	print_current_part "C01"
 	cp -r $src_path/c01/ex* ./src/c01  # copying src files
 	
 	check_c01_ex00

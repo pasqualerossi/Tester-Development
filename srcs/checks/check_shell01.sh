@@ -176,7 +176,7 @@ function	check_sh01_ex08() {
 
 function	shell01() {
 	mkdir src/shell01 user_output/shell01 
-	print_current_part "shell01"
+	print_current_part "Shell01"
 	cp -r $src_path/shell01/ex* ./src/shell01  # copying src files
 	
 	check_sh01_ex01

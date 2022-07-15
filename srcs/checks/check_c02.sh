@@ -640,7 +640,7 @@ function	check_c02_ex12() {
 
 function	c02() {
 	mkdir src/c02 user_output/c02
-	print_current_part "c02"
+	print_current_part "C02"
 	cp -r $src_path/c02/ex* ./src/c02  # copying src files
 	
 	check_c02_ex00

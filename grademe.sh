@@ -1,8 +1,10 @@
 #!/bin/bash
 
-# CHANGE TO WHERE YOUR PISCINE PROJECTS ARE LOCATED AT
+# CHANGE TO WHERE YOUR PISCINE FOLDER IS LOCATED AT
 
 src_path="../piscine" # set projects directory here
+
+# DO NOT CHANGE ANYTHING BELOW
 
 current_dir=$PWD
 

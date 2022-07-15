@@ -370,7 +370,7 @@ function	check_c03_ex05() {
 
 function	c03() {
 	mkdir src/c03 user_output/c03
-	print_current_part "c03"
+	print_current_part "C03"
 	cp -r $src_path/c03/ex* ./src/c03  # copying src files
 	
 	check_c03_ex00
