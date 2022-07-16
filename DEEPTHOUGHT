@@ -1,57 +1,101 @@
 $> hostname; uname -msr
-F3C029.42adel.org.au
+Christinas-MBP.modem
 Darwin 19.6.0 x86_64
 $> date
-Fri Jul 15 21:55:44 ACST 2022
+Sat 16 Jul 2022 23:37:41 ACST
 $> gcc --version
 $> clang --version
-Apple clang version 12.0.0 (clang-1200.0.32.28)
+Apple clang version 12.0.0 (clang-1200.0.32.21)
 Target: x86_64-apple-darwin19.6.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 $> echo $USER_NAME
-prossi
+christina
 
 Ready for testing
 
-Testing C01:
+Testing C00:
 
 = ex00 =
 ==========================================
-$>src/c01/ex00/ft_ft.c is missing. Skipping...
+
+Norme: ./src/c00/ex00/ft_putchar.c: OK
+$> gcc -Wall -Werror -Wextra ./tests/c00/ex00/main.c ./src/c00/ex00/ft_putchar.c -o /Users/christina/Desktop/Tester-Development/user_output/c00/ex00
+
+diff ok :D
 
 = ex01 =
 ==========================================
-$>src/c01/ex01/ft_ultimate_ft.c is missing. Skipping...
+
+Norme: ./src/c00/ex01/ft_print_alphabet.c: OK
+$> gcc -Wall -Werror -Wextra ./tests/c00/ex01/main.c ./src/c00/ex01/ft_print_alphabet.c -o /Users/christina/Desktop/Tester-Development/user_output/c00/ex01
+
+diff ok :D
 
 = ex02 =
 ==========================================
-$>src/c01/ex02/ft_swap.c is missing. Skipping...
+
+Norme: ./src/c00/ex02/ft_print_reverse_alphabet.c: OK
+$> gcc -Wall -Werror -Wextra ./tests/c00/ex02/main.c ./src/c00/ex02/ft_print_reverse_alphabet.c -o /Users/christina/Desktop/Tester-Development/user_output/c00/ex02
+
+diff ok :D
 
 = ex03 =
 ==========================================
-$>src/c01/ex03/ft_div_mod.c is missing. Skipping...
+
+Norme: ./src/c00/ex03/ft_print_numbers.c: OK
+$> gcc -Wall -Werror -Wextra ./tests/c00/ex03/main.c ./src/c00/ex03/ft_print_numbers.c -o /Users/christina/Desktop/Tester-Development/user_output/c00/ex03
+
+diff ok :D
 
 = ex04 =
 ==========================================
-$>src/c01/ex04/ft_ultimate_div_mod.c is missing. Skipping...
+
+Norme: ./src/c00/ex04/ft_is_negative.c: OK
+$> gcc -Wall -Werror -Wextra ./tests/c00/ex04/main.c ./src/c00/ex04/ft_is_negative.c -o /Users/christina/Desktop/Tester-Development/user_output/c00/ex04
+> test 0 with n=42
+diff ok :D
+
+> test 1 with n=2147483646
+diff ok :D
+
+> test 2 with n=1337
+diff ok :D
+
+> test 3 with n=-42
+diff ok :D
+
+> test 4 with n=-2147483647
+diff ok :D
+
+> test 5 with n=-1337
+diff ok :D
+
+> test 6 with n=6473287
+diff ok :D
+
+> test 7 with n=-328
+diff ok :D
+
+> test 8 with n=612567
+diff ok :D
 
 = ex05 =
 ==========================================
-$>src/c01/ex05/ft_putstr.c is missing. Skipping...
+
+Norme: ./src/c00/ex05/ft_print_comb.c: OK
+$> gcc -Wall -Werror -Wextra ./tests/c00/ex05/main.c ./src/c00/ex05/ft_print_comb.c -o /Users/christina/Desktop/Tester-Development/user_output/c00/ex05
+
+diff ok :D
 
 = ex06 =
 ==========================================
-$>src/c01/ex06/ft_strlen.c is missing. Skipping...
+$>src/c00/ex06/ft_print_comb2.c is missing. Skipping...
 
 = ex07 =
 ==========================================
-$>src/c01/ex07/ft_rev_int_tab.c is missing. Skipping...
-
-= ex08 =
-==========================================
-$>src/c01/ex08/ft_sort_int_tab.c is missing. Skipping...
+$>src/c00/ex07/ft_putnbr.c is missing. Skipping...
 
 
 
-All c01 tests are done.
+All c00 tests are done.

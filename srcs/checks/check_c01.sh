@@ -354,6 +354,6 @@ function	c01() {
 	check_c01_ex07
 	check_c01_ex08
 	rm -rf $current_dir/user_output/c01 $current_dir/src/c01
-	printf "${GREEN}\nAll c01 tests are done.\n\n${NOCOLOR}"
+	printf "${NOCOLOR}"
 	printf "\n\nAll c01 tests are done.\n" >> DEEPTHOUGHT
 }

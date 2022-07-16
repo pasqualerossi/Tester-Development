@@ -1,38 +1,31 @@
 #!/bin/bash
 
 function	choices() {
-printf "${YELLOW}
-        =================
-        42 PISCINE TESTER
-        =================	
+printf "${YELLOW}=====================
+THE 42 PISCINE TESTER
+=====================
 
-	SHELL00 AND SHELL01	
-
-	${NOCOLOR}Type 'shell00' To Test Your Shell00
-	${NOCOLOR}Type 'shell01' To Test Your Shell01
-
-	${NOCOLOR}Type 'both shells' To Test Both Your Shell00 and Shell01 Together
-
-	${YELLOW}C00 TO C06
-
-	${NOCOLOR}Type 'c00' To Test Your C00
-	${NOCOLOR}Type 'c01' To Test Your C01
-	${NOCOLOR}Type 'c02' To Test Your C02
-	${NOCOLOR}Type 'c03' To Test Your C03
-	${NOCOLOR}Type 'c04' To Test Your C04
-	${NOCOLOR}Type 'c05' To Test Your C05
-	${NOCOLOR}Type 'c06' To Test Your C06
-
-	${NOCOLOR}Type 'all' c projects' To Test Your C Projects Together
-
-	${YELLOW}SHELL AND C
+${YELLOW}SHELL00 AND SHELL01
 	
-	${NOCOLOR}Type 'all' To Test Both Your Shell and C Projects Together
+${YELLOW}Type${NOCOLOR} Shell00${YELLOW} To Test Your Shell00
+${YELLOW}Type${NOCOLOR} Shell01${YELLOW} To Test Your Shell01
+	
+${YELLOW}Type${NOCOLOR} both shells${YELLOW} To Test Both Your Shell00 and Shell01 Together
+ 
+C00 TO C06
 
-	${YELLOW}TO RUN TESTER AGAIN
+${YELLOW}Type${NOCOLOR} c00${YELLOW} To Test Your C00
+${YELLOW}Type${NOCOLOR} c01${YELLOW} To Test Your C01
+${YELLOW}Type${NOCOLOR} c02${YELLOW} To Test Your C02
+${YELLOW}Type${NOCOLOR} c03${YELLOW} To Test Your C03
+${YELLOW}Type${NOCOLOR} c04${YELLOW} To Test Your C04
+${YELLOW}Type${NOCOLOR} c05${YELLOW} To Test Your C05
+${YELLOW}Type${NOCOLOR} c06${YELLOW} To Test Your C06
 
-	${NOCOLOR}Type ./grademe.sh 
+${YELLOW}Type${NOCOLOR} all c projects${YELLOW} To Test Your C00 To C06 Together
+${YELLOW}Type${NOCOLOR} all${YELLOW} To Test Both Your Shell and C Together
 
+${YELLOW}Type${NOCOLOR} ./gradme.sh${YELLOW} To Run This Tester Again
 
 ${NOCOLOR}What Do You Want To Test?: "
 	read
