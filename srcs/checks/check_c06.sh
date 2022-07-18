@@ -3,7 +3,7 @@
 function	check_c06_ex00() {
 	usr_out=$current_dir/user_output/c06/ex00
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex00:\n${NOCOLOR}"
+	printf " ${YELLOW}ex00\n${NOCOLOR}"
 	printf "= ex00 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c06/ex00/ft_print_program_name.c" ; then
 		msg_nothing_turned_in "ex00/ft_print_program_name.c"
@@ -35,7 +35,7 @@ function	check_c06_ex00() {
 function	check_c06_ex01() {
 	usr_out=$current_dir/user_output/c06/ex01
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex01:\n${NOCOLOR}"
+	printf " ${YELLOW}ex01\n${NOCOLOR}"
 	printf "= ex01 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c06/ex01/ft_print_params.c" ; then
 		msg_nothing_turned_in "ex01/ft_print_params.c"
@@ -68,7 +68,7 @@ function	check_c06_ex01() {
 function	check_c06_ex02() {
 	usr_out=$current_dir/user_output/c06/ex02
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex02:\n${NOCOLOR}"
+	printf " ${YELLOW}ex02\n${NOCOLOR}"
 	printf "= ex02 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c06/ex02/ft_rev_params.c" ; then
 		msg_nothing_turned_in "ex02/ft_rev_params.c"
@@ -101,7 +101,7 @@ function	check_c06_ex02() {
 function	check_c06_ex03() {
 	usr_out=$current_dir/user_output/c06/ex03
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex03:\n${NOCOLOR}"
+	printf " ${YELLOW}ex03\n${NOCOLOR}"
 	printf "= ex03 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c06/ex03/ft_sort_params.c" ; then
 		msg_nothing_turned_in "ex03/ft_sort_params.c"

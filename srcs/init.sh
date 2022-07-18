@@ -15,8 +15,6 @@ function	clean_before_launch() {
 function	init() {
 	clean_before_launch
 	mkdir src user_output
-# USER_NAME=gpatingr # so that i dont have to rewrite everytime
-#	ask_username    # should ask only for sh00
 	deepthought_init
 }
 

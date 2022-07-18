@@ -3,7 +3,7 @@
 function	check_c03_ex00() {
 	usr_out=$current_dir/user_output/c03/ex00
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex00:\n${NOCOLOR}"
+	printf " ${YELLOW}ex00\n${NOCOLOR}"
 	printf "= ex00 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c03/ex00/ft_strcmp.c" ; then
 		msg_nothing_turned_in "ex00/ft_strcmp.c"
@@ -59,7 +59,7 @@ function	check_c03_ex00() {
 function	check_c03_ex01() {
 	usr_out=$current_dir/user_output/c03/ex01
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex01:\n${NOCOLOR}"
+	printf " ${YELLOW}ex01\n${NOCOLOR}"
 	printf "= ex01 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c03/ex01/ft_strncmp.c" ; then
 		msg_nothing_turned_in "ex01/ft_strncmp.c"
@@ -115,7 +115,7 @@ function	check_c03_ex01() {
 function	check_c03_ex02() {
 	usr_out=$current_dir/user_output/c03/ex02
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex02:\n${NOCOLOR}"
+	printf " ${YELLOW}ex02\n${NOCOLOR}"
 	printf "= ex02 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c03/ex02/ft_strcat.c" ; then
 		msg_nothing_turned_in "ex02/ft_strcat.c"
@@ -172,7 +172,7 @@ function	check_c03_ex02() {
 function	check_c03_ex03() {
 	usr_out=$current_dir/user_output/c03/ex03
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex03:\n${NOCOLOR}"
+	printf " ${YELLOW}ex03\n${NOCOLOR}"
 	printf "= ex03 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c03/ex03/ft_strncat.c" ; then
 		msg_nothing_turned_in "ex03/ft_strncat.c"
@@ -230,7 +230,7 @@ function	check_c03_ex03() {
 function	check_c03_ex04() {
 	usr_out=$current_dir/user_output/c03/ex04
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex04:\n${NOCOLOR}"
+	printf " ${YELLOW}ex04\n${NOCOLOR}"
 	printf "= ex04 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c03/ex04/ft_strstr.c" ; then
 		msg_nothing_turned_in "ex04/ft_strstr.c"
@@ -302,7 +302,7 @@ function	check_c03_ex04() {
 function	check_c03_ex05() {
 	usr_out=$current_dir/user_output/c03/ex05
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex05:\n${NOCOLOR}"
+	printf " ${YELLOW}ex05\n${NOCOLOR}"
 	printf "= ex05 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c03/ex05/ft_strlcat.c" ; then
 		msg_nothing_turned_in "ex05/ft_strlcat.c"

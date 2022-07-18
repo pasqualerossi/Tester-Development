@@ -3,7 +3,7 @@
 function	check_c04_ex00() {
 	usr_out=$current_dir/user_output/c04/ex00
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex00:\n${NOCOLOR}"
+	printf " ${YELLOW}ex00\n${NOCOLOR}"
 	printf "= ex00 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c04/ex00/ft_strlen.c" ; then
 		msg_nothing_turned_in "ex00/ft_strlen.c"
@@ -70,7 +70,7 @@ function	check_c04_ex00() {
 function	check_c04_ex01() {
 	usr_out=$current_dir/user_output/c04/ex01
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex01:\n${NOCOLOR}"
+	printf " ${YELLOW}ex01\n${NOCOLOR}"
 	printf "= ex01 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c04/ex01/ft_putstr.c" ; then
 		msg_nothing_turned_in "ex01/ft_putstr.c"
@@ -138,7 +138,7 @@ function	check_c04_ex01() {
 function	check_c04_ex02() {
 	usr_out=$current_dir/user_output/c04/ex02
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex02:\n${NOCOLOR}"
+	printf " ${YELLOW}ex02\n${NOCOLOR}"
 	printf "= ex02 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c04/ex02/ft_list_at.c" ; then
 		msg_nothing_turned_in "ex02/ft_list_at.c"
@@ -197,7 +197,7 @@ function	check_c04_ex02() {
 function	check_c04_ex03() {
 	usr_out=$current_dir/user_output/c04/ex03
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex03:\n${NOCOLOR}"
+	printf " ${YELLOW}ex03\n${NOCOLOR}"
 	printf "= ex03 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c04/ex03/ft_atoi.c" ; then
 		msg_nothing_turned_in "ex03/ft_atoi.c"

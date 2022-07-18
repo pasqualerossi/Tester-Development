@@ -3,7 +3,7 @@
 function	check_c01_ex00() {
 	usr_out=$current_dir/user_output/c01/ex00
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex00:\n${NOCOLOR}"
+	printf " ${YELLOW}ex00:\n${NOCOLOR}"
 	printf "= ex00 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c01/ex00/ft_ft.c" ; then
 		msg_nothing_turned_in "ex00/ft_ft.c"
@@ -36,7 +36,7 @@ function	check_c01_ex00() {
 function	check_c01_ex01() {
 	usr_out=$current_dir/user_output/c01/ex01
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex01:\n${NOCOLOR}"
+	printf " ${YELLOW}ex01:\n${NOCOLOR}"
 	printf "= ex01 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c01/ex01/ft_ultimate_ft.c" ; then
 		msg_nothing_turned_in "ex01/ft_ultimate_ft.c"
@@ -69,7 +69,7 @@ function	check_c01_ex01() {
 function	check_c01_ex02() {
 	usr_out=$current_dir/user_output/c01/ex02
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex02:\n${NOCOLOR}"
+	printf " ${YELLOW}ex02:\n${NOCOLOR}"
 	printf "= ex02 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c01/ex02/ft_swap.c" ; then
 		msg_nothing_turned_in "ex02/ft_swap.c"
@@ -103,7 +103,7 @@ function	check_c01_ex02() {
 function	check_c01_ex03() {
 	usr_out=$current_dir/user_output/c01/ex03
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex03:\n${NOCOLOR}"
+	printf " ${YELLOW}ex03:\n${NOCOLOR}"
 	printf "= ex03 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c01/ex03/ft_div_mod.c" ; then
 		msg_nothing_turned_in "ex03/ft_div_mod.c"
@@ -151,7 +151,7 @@ function	check_c01_ex03() {
 function	check_c01_ex04() {
 	usr_out=$current_dir/user_output/c01/ex04
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex04:\n${NOCOLOR}"
+	printf " ${YELLOW}ex04:\n${NOCOLOR}"
 	printf "= ex04 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c01/ex04/ft_ultimate_div_mod.c" ; then
 		msg_nothing_turned_in "ex04/ft_ultimate_div_mod.c"
@@ -199,7 +199,7 @@ function	check_c01_ex04() {
 function	check_c01_ex05() {
 	usr_out=$current_dir/user_output/c01/ex05
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex05:\n${NOCOLOR}"
+	printf " ${YELLOW}ex05:\n${NOCOLOR}"
 	printf "= ex05 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c01/ex05/ft_putstr.c" ; then
 		msg_nothing_turned_in "ex05/ft_putstr.c"
@@ -233,7 +233,7 @@ function	check_c01_ex05() {
 function	check_c01_ex06() {
 	usr_out=$current_dir/user_output/c01/ex06
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex06:\n${NOCOLOR}"
+	printf " ${YELLOW}ex06:\n${NOCOLOR}"
 	printf "= ex06 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c01/ex06/ft_strlen.c" ; then
 		msg_nothing_turned_in "ex06/ft_strlen.c"
@@ -276,7 +276,7 @@ function	check_c01_ex06() {
 function	check_c01_ex07() {
 	usr_out=$current_dir/user_output/c01/ex07
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex07:\n${NOCOLOR}"
+	printf " ${YELLOW}ex07:\n${NOCOLOR}"
 	printf "= ex07 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c01/ex07/ft_rev_int_tab.c" ; then
 		msg_nothing_turned_in "ex07/ft_rev_int_tab.c"
@@ -309,7 +309,7 @@ function	check_c01_ex07() {
 function	check_c01_ex08() {
 	usr_out=$current_dir/user_output/c01/ex08
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex08:\n${NOCOLOR}"
+	printf " ${YELLOW}ex08:\n${NOCOLOR}"
 	printf "= ex08 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c01/ex08/ft_sort_int_tab.c" ; then
 		msg_nothing_turned_in "ex08/ft_sort_int_tab.c"

@@ -3,7 +3,7 @@
 function	check_c00_ex00() {
 	usr_out=$current_dir/user_output/c00/ex00
 	mkdir $usr_out
-	printf " ${YELLOW}ex00\n${NOCOLOR}"
+	printf " ${YELLOW}${UNDERLINE}ex00\n${NOCOLOR}"
 	printf "= ex00 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex00/ft_putchar.c" ; then
 		msg_nothing_turned_in "ex00/ft_putchar.c"
@@ -29,7 +29,7 @@ function	check_c00_ex00() {
 		diff <(echo $RES) <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_success}ex00/ft_putchar.c\t\t${diff_ok}${NOCOLOR}\n\n"
+		printf "${uni_success}ex00/ft_putchar.c\t\t${diff_ok}${NOCOLOR}\n"
 		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
 	cd $current_dir
@@ -38,7 +38,7 @@ function	check_c00_ex00() {
 function	check_c00_ex01() {
 	usr_out=$current_dir/user_output/c00/ex01
 	mkdir $usr_out
-	printf " ${YELLOW}ex01\n${NOCOLOR}"
+	printf " ${YELLOW}${UNDERLINE}ex01\n${NOCOLOR}"
 	printf "= ex01 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex01/ft_print_alphabet.c" ; then
 		msg_nothing_turned_in "ex01/ft_print_alphabet.c"
@@ -63,7 +63,7 @@ function	check_c00_ex01() {
 		diff <(echo $RES) <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_success}ex01/ft_print_alphabet\t${diff_ok}${NOCOLOR}\n\n"
+		printf "${uni_success}ex01/ft_print_alphabet\t${diff_ok}${NOCOLOR}\n"
 		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
 	cd $current_dir
@@ -72,7 +72,7 @@ function	check_c00_ex01() {
 function	check_c00_ex02() {
 	usr_out=$current_dir/user_output/c00/ex02
 	mkdir $usr_out
-	printf " ${YELLOW}ex02\n${NOCOLOR}"
+	printf " ${YELLOW}${UNDERLINE}ex02\n${NOCOLOR}"
 	printf "= ex02 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex02/ft_print_reverse_alphabet.c" ; then
 		msg_nothing_turned_in "ex02/ft_print_reverse_alphabet.c"
@@ -97,7 +97,7 @@ function	check_c00_ex02() {
 		diff <(echo $RES) <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_success}ex02/ft_print_reverse_alphabet${diff_ok}${NOCOLOR}\n\n"
+		printf "${uni_success}ex02/ft_print_reverse_alphabet${diff_ok}${NOCOLOR}\n"
 		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
 	cd $current_dir
@@ -106,7 +106,7 @@ function	check_c00_ex02() {
 function	check_c00_ex03() {
 	usr_out=$current_dir/user_output/c00/ex03
 	mkdir $usr_out
-	printf " ${YELLOW}ex03\n${NOCOLOR}"
+	printf " ${YELLOW}${UNDERLINE}ex03\n${NOCOLOR}"
 	printf "= ex03 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex03/ft_print_numbers.c" ; then
 		msg_nothing_turned_in "ex03/ft_print_numbers.c"
@@ -131,7 +131,7 @@ function	check_c00_ex03() {
 		diff <(echo $RES) <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_success}ex03/ft_print_numbers\t${diff_ok}${NOCOLOR}\n\n"
+		printf "${uni_success}ex03/ft_print_numbers\t${diff_ok}${NOCOLOR}\n"
 		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
 	cd $current_dir
@@ -140,7 +140,7 @@ function	check_c00_ex03() {
 function	check_c00_ex04() {
 	usr_out=$current_dir/user_output/c00/ex04
 	mkdir $usr_out
-	printf " ${YELLOW}ex04\n${NOCOLOR}"
+	printf " ${YELLOW}${UNDERLINE}ex04\n${NOCOLOR}"
 	printf "= ex04 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex04/ft_is_negative.c" ; then
 		msg_nothing_turned_in "ex04/ft_is_negative.c"
@@ -166,10 +166,10 @@ function	check_c00_ex04() {
 		local USER_OUTPUT=$(./user.out ${NUMBER[$i]})
 		printf "> test $i with n=${NUMBER[i]}\n" >> $current_dir/DEEPTHOUGHT
 		if [ "$USER_OUTPUT" == "P" ] && [ ${NUMBER[i]} -gt 0 ]; then
-			printf "${uni_success}ex04/ft_is_negative.c\t${diff_ok}${NOCOLOR}\n\n"
+			printf "${uni_success}ex04/ft_is_negative.c\t${diff_ok}${NOCOLOR}\n"
 			printf "diff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 		elif [ "$USER_OUTPUT" == "N" ] && [ ${NUMBER[i]} -lt 0 ] ; then
-			printf "${uni_success}ex04/ft_is_negative.c\t${diff_ok}${NOCOLOR}\n\n"
+			printf "${uni_success}ex04/ft_is_negative.c\t${diff_ok}${NOCOLOR}\n"
 			printf "diff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 		else
 			printf "${uni_fail}ex04/ft_is_negative.c\t${diff_ko}${NOCOLOR}\n"
@@ -184,7 +184,7 @@ function	check_c00_ex04() {
 function	check_c00_ex05() {
 	usr_out=$current_dir/user_output/c00/ex05
 	mkdir $usr_out
-	printf " ${YELLOW}ex05\n${NOCOLOR}"
+	printf " ${YELLOW}${UNDERLINE}ex05\n${NOCOLOR}"
 	printf "= ex05 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex05/ft_print_comb.c" ; then
 		msg_nothing_turned_in "ex05/ft_print_comb.c"
@@ -209,7 +209,7 @@ function	check_c00_ex05() {
 		diff <(echo $RES) <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_success}ex05/ft_print_comb\t\t${diff_ok}${NOCOLOR}\n\n"
+		printf "${uni_success}ex05/ft_print_comb\t\t${diff_ok}${NOCOLOR}\n"
 		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
 	cd $current_dir
@@ -218,7 +218,7 @@ function	check_c00_ex05() {
 function	check_c00_ex06() {
 	usr_out=$current_dir/user_output/c00/ex06
 	mkdir $usr_out
-	printf " ${YELLOW}ex06\n${NOCOLOR}"
+	printf " ${YELLOW}${UNDERLINE}ex06\n${NOCOLOR}"
 	printf "= ex06 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex06/ft_print_comb2.c" ; then
 		msg_nothing_turned_in "ex06/ft_print_comb2.c"
@@ -231,7 +231,7 @@ function	check_c00_ex06() {
 	fi
 	compile_tests ./tests/c00/ex06/main.c ./src/c00/ex06/ft_print_comb2.c 
 	if [ "$IS_COMPILED" != "0" ] ; then
-		printf "${uni_fail}ex06/ft_print_comb2.c\t\t${diff_ko}${NOCOLOR}\n\n"
+		printf "${uni_fail}ex06/ft_print_comb2.c\t\t${diff_ko}${NOCOLOR}\n"
 		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
 		return
 	fi
@@ -239,11 +239,11 @@ function	check_c00_ex06() {
 	./user.out > res.out
 	DIFF=$(diff res.out $current_dir/tests/c00/ex06/comb_res)
 	if [ "$DIFF" != "" ]; then
-		printf "${uni_fail}ex06/ft_print_comb2.c\t\t${diff_ko}${NOCOLOR}\n\n"
+		printf "${uni_fail}ex06/ft_print_comb2.c\t\t${diff_ko}${NOCOLOR}\n"
 		echo $DIFF >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_success}ex06/ft_print_comb2\t\t${diff_ok}${NOCOLOR}\n\n"
+		printf "${uni_success}ex06/ft_print_comb2\t\t${diff_ok}${NOCOLOR}\n"
 		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
 	cd $current_dir
@@ -252,7 +252,7 @@ function	check_c00_ex06() {
 function	check_c00_ex07() {
 	usr_out=$current_dir/user_output/c00/ex07
 	mkdir $usr_out
-	printf " ${YELLOW}ex07\n${NOCOLOR}"
+	printf " ${YELLOW}${UNDERLINE}ex07\n${NOCOLOR}"
 	printf "= ex07 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c00/ex07/ft_putnbr.c" ; then
 		msg_nothing_turned_in "ex07/ft_putnbr.c"
@@ -265,7 +265,7 @@ function	check_c00_ex07() {
 	fi
 	compile_tests ./tests/c00/ex07/main.c ./src/c00/ex07/ft_putnbr.c 
 	if [ "$IS_COMPILED" != "0" ] ; then
-		printf "${uni_fail}ex07/ft_putnbr.c\t\t${diff_ko}${NOCOLOR}\n\n"
+		printf "${uni_fail}ex07/ft_putnbr.c\t\t${diff_ko}${NOCOLOR}\n"
 		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
 		return
 	fi
@@ -277,10 +277,10 @@ function	check_c00_ex07() {
 		local USER_OUTPUT=$(./user.out ${NUMBER[$i]})
 		printf "> test $i with nb=${NUMBER[i]}\n" >> $current_dir/DEEPTHOUGHT
 		if [ "$USER_OUTPUT" == "${NUMBER[i]}" ] ; then
-			printf "${uni_success}ex07/ft_putnbr.c\t\t${diff_ok}${NOCOLOR}\n\n"
+			printf "${uni_success}ex07/ft_putnbr.c\t\t${diff_ok}${NOCOLOR}\n"
 			printf "diff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 		else
-			printf "${uni_fail}ex07/ft_putnbr.c\t\t${diff_ko}${NOCOLOR}\n\n"
+			printf "${uni_fail}ex07/ft_putnbr.c\t\t${diff_ko}${NOCOLOR}\n"
 			printf "$USER_OUTPUT\n"
 			printf "diff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 		fi
@@ -289,9 +289,44 @@ function	check_c00_ex07() {
 	cd $current_dir
 }
 
+function	check_c00_ex08() {
+	usr_out=$current_dir/user_output/c00/ex08
+	mkdir $usr_out
+	printf " ${YELLOW}${UNDERLINE}ex08\n${NOCOLOR}"
+	printf "= ex08 =\n==========================================\n" >> DEEPTHOUGHT
+	if ! file_exists "src/c00/ex08/ft_print_combn.c" ; then
+		msg_nothing_turned_in "ex08/ft_print_combn.c"
+		return
+	fi
+#	PROTOTYPE=$(grep -E "^$TYPE"$'\t{1,}'"$FUNC_NAME"'\([^)]+\)' src/c00/ex08/ft_print_combn.c)
+	check_norme "src/c00/ex08/ft_print_combn.c"
+	check_prototype "void" "\ft_print_combn" "src/c00/ex08/ft_print_combn.c"
+	if [ "$NORME" != "0" ] ; then
+		return
+	fi
+	compile_tests ./tests/c00/ex08/main.c ./src/c00/ex08/ft_print_combn.c 
+	if [ "$IS_COMPILED" != "0" ] ; then
+		printf "${uni_fail}ex08/ft_print_combn.c\t\t${diff_ko}${NOCOLOR}\n"
+		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
+		return
+	fi
+	local RES=" !\"#\$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_\`abcdefghijklmnopqrstuvwxyz{|}~"
+	cd $usr_out
+	local USER_OUTPUT=$(./user.out)
+	if [ "$RES" != "$USER_OUTPUT" ]; then
+		printf "${uni_fail}ex08/ft_print_combn.c\t\t${diff_ko}${NOCOLOR}\n"
+		diff <(echo $RES) <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
+		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
+	else
+		printf "${uni_success}ex08/ft_print_combn.c\t\t${diff_ok}${NOCOLOR}\n"
+		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
+	fi
+	cd $current_dir
+}
+
 function	c00() {
 	mkdir src/c00 user_output/c00
-	print_current_part "C00"
+	print_current_part "c00"
 	cp -r $src_path/c00/ex* ./src/c00  # copying src files
 	
 	check_c00_ex00
@@ -302,10 +337,11 @@ function	c00() {
 	check_c00_ex05
 	check_c00_ex06
 	check_c00_ex07
+	check_c00_ex08
 	rm -rf $current_dir/user_output/c00 $current_dir/src/c00
 	printf "\n${NOCOLOR}"
 	printf "${YELLOW}==============================================="
 	printf "${YELLOW}\nType ${NOCOLOR}./gradme.sh ${YELLOW}Below To Run This Tester Again\n${NOCOLOR}"
 	printf "${YELLOW}===============================================\n${NOCOLOR}"
-	printf "\n\nAll c00 tests are done." >> DEEPTHOUGHT
+	printf "\n\nAll c01 tests are done." >> DEEPTHOUGHT
 }

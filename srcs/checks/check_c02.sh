@@ -3,7 +3,7 @@
 function	check_c02_ex00() {
 	usr_out=$current_dir/user_output/c02/ex00
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex00:\n${NOCOLOR}"
+	printf " ${YELLOW}ex00\n${NOCOLOR}"
 	printf "= ex00 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c02/ex00/ft_strcpy.c" ; then
 		msg_nothing_turned_in "ex00/ft_strcpy.c"
@@ -37,7 +37,7 @@ function	check_c02_ex00() {
 function	check_c02_ex01() {
 	usr_out=$current_dir/user_output/c02/ex01
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex01:\n${NOCOLOR}"
+	printf " ${YELLOW}ex01\n${NOCOLOR}"
 	printf "= ex01 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c02/ex01/ft_strncpy.c" ; then
 		msg_nothing_turned_in "ex01/ft_strncpy.c"
@@ -71,7 +71,7 @@ function	check_c02_ex01() {
 function	check_c02_ex02() {
 	usr_out=$current_dir/user_output/c02/ex02
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex02:\n${NOCOLOR}"
+	printf " ${YELLOW}ex02\n${NOCOLOR}"
 	printf "= ex02 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c02/ex02/ft_str_is_alpha.c" ; then
 		msg_nothing_turned_in "ex02/ft_str_is_alpha.c"
@@ -149,7 +149,7 @@ function	check_c02_ex02() {
 function	check_c02_ex03() {
 	usr_out=$current_dir/user_output/c02/ex03
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex03:\n${NOCOLOR}"
+	printf " ${YELLOW}ex03\n${NOCOLOR}"
 	printf "= ex03 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c02/ex03/ft_str_is_numeric.c" ; then
 		msg_nothing_turned_in "ex03/ft_str_is_numeric.c"
@@ -227,7 +227,7 @@ function	check_c02_ex03() {
 function	check_c02_ex04() {
 	usr_out=$current_dir/user_output/c02/ex04
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex04:\n${NOCOLOR}"
+	printf " ${YELLOW}ex04\n${NOCOLOR}"
 	printf "= ex04 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c02/ex04/ft_str_is_lowercase.c" ; then
 		msg_nothing_turned_in "ex04/ft_str_is_lowercase.c"
@@ -305,7 +305,7 @@ function	check_c02_ex04() {
 function	check_c02_ex05() {
 	usr_out=$current_dir/user_output/c02/ex05
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex05:\n${NOCOLOR}"
+	printf " ${YELLOW}ex05\n${NOCOLOR}"
 	printf "= ex05 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c02/ex05/ft_str_is_uppercase.c" ; then
 		msg_nothing_turned_in "ex05/ft_str_is_uppercase.c"
@@ -383,7 +383,7 @@ function	check_c02_ex05() {
 function	check_c02_ex06() {
 	usr_out=$current_dir/user_output/c02/ex06
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex06:\n${NOCOLOR}"
+	printf " ${YELLOW}ex06\n${NOCOLOR}"
 	printf "= ex06 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c02/ex06/ft_str_is_printable.c" ; then
 		msg_nothing_turned_in "ex06/ft_str_is_printable.c"
@@ -417,7 +417,7 @@ function	check_c02_ex06() {
 function	check_c02_ex07() {
 	usr_out=$current_dir/user_output/c02/ex07
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex07:\n${NOCOLOR}"
+	printf " ${YELLOW}ex07\n${NOCOLOR}"
 	printf "= ex07 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c02/ex07/ft_strupcase.c" ; then
 		msg_nothing_turned_in "ex07/ft_strupcase.c"
@@ -463,7 +463,7 @@ function	check_c02_ex07() {
 function	check_c02_ex08() {
 	usr_out=$current_dir/user_output/c02/ex08
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex08:\n${NOCOLOR}"
+	printf " ${YELLOW}ex08\n${NOCOLOR}"
 	printf "= ex08 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c02/ex08/ft_strlowcase.c" ; then
 		msg_nothing_turned_in "ex08/ft_strlowcase.c"
@@ -509,7 +509,7 @@ function	check_c02_ex08() {
 function	check_c02_ex09() {
 	usr_out=$current_dir/user_output/c02/ex09
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex09:\n${NOCOLOR}"
+	printf " ${YELLOW}ex09\n${NOCOLOR}"
 	printf "= ex09 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c02/ex09/ft_strcapitalize.c" ; then
 		msg_nothing_turned_in "ex09/ft_strcapitalize.c"
@@ -566,7 +566,7 @@ function	check_c02_ex09() {
 function	check_c02_ex10() {
 	usr_out=$current_dir/user_output/c02/ex10
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex10:\n${NOCOLOR}"
+	printf " ${YELLOW}ex10\n${NOCOLOR}"
 	printf "= ex10 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c02/ex10/ft_strlcpy.c" ; then
 		msg_nothing_turned_in "ex10/ft_strlcpy.c"
@@ -600,7 +600,7 @@ function	check_c02_ex10() {
 function	check_c02_ex11() {
 	usr_out=$current_dir/user_output/c02/ex11
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex11:\n${NOCOLOR}"
+	printf " ${YELLOW}ex11\n${NOCOLOR}"
 	printf "= ex11 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c02/ex11/ft_putstr_non_printable.c" ; then
 		msg_nothing_turned_in "ex11/ft_putstr_non_printable.c"
@@ -634,7 +634,7 @@ function	check_c02_ex11() {
 function	check_c02_ex12() {
 	usr_out=$current_dir/user_output/c02/ex12
 	mkdir $usr_out
-	printf " ${YELLOW}${UNDERLINE}ex12:\n${NOCOLOR}"
+	printf " ${YELLOW}ex12\n${NOCOLOR}"
 	printf "= ex12 =\n==========================================\n" >> DEEPTHOUGHT
 	if ! file_exists "src/c02/ex12/ft_print_memory.c" ; then
 		msg_nothing_turned_in "ex11/ft_print_memory.c"
