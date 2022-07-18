@@ -380,6 +380,9 @@ function	c03() {
 	check_c03_ex04
 	check_c03_ex05
 	rm -rf $current_dir/user_output/c03 $current_dir/src/c03
-	printf "${GREEN}\nAll c03 tests are done.\n\n${NOCOLOR}"
-	printf "\n\nAll c03 tests are done.\n" >> DEEPTHOUGHT
+	printf "\n${NOCOLOR}"
+	printf "${YELLOW}==============================================="
+	printf "${YELLOW}\nType ${NOCOLOR}./gradme.sh ${YELLOW}Below To Run This Tester Again\n${NOCOLOR}"
+	printf "${YELLOW}===============================================\n${NOCOLOR}"
+	printf "\n\nAll c03 tests are done." >> DEEPTHOUGHT
 }

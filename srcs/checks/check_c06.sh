@@ -142,6 +142,9 @@ function	c06() {
 	check_c06_ex03
 
 	rm -rf $current_dir/user_output/c06 $current_dir/src/c06
-	printf "${GREEN}\nAll c06 tests are done.\n\n${NOCOLOR}"
-	printf "\n\nAll c06 tests are done.\n" >> DEEPTHOUGHT
+	printf "\n${NOCOLOR}"
+	printf "${YELLOW}==============================================="
+	printf "${YELLOW}\nType ${NOCOLOR}./gradme.sh ${YELLOW}Below To Run This Tester Again\n${NOCOLOR}"
+	printf "${YELLOW}===============================================\n${NOCOLOR}"
+	printf "\n\nAll c06 tests are done." >> DEEPTHOUGHT
 }

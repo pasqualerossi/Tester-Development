@@ -322,6 +322,9 @@ function	shell00() {
 	check_sh00_ex07
 	check_sh00_ex08
 	check_sh00_ex09
-	printf "${GREEN}\nAll shell00 tests are done.\n\n${NOCOLOR}"
-	printf "\n\nAll shell00 tests are done.\n" >> DEEPTHOUGHT
+	printf "\n${NOCOLOR}"
+	printf "${YELLOW}==============================================="
+	printf "${YELLOW}\nType ${NOCOLOR}./gradme.sh ${YELLOW}Below To Run This Tester Again\n${NOCOLOR}"
+	printf "${YELLOW}===============================================\n${NOCOLOR}"
+	printf "\n\nAll Shell00 tests are done." >> DEEPTHOUGHT
 }

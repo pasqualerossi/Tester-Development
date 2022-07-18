@@ -632,11 +632,39 @@ function	check_c02_ex11() {
 }
 
 function	check_c02_ex12() {
+	usr_out=$current_dir/user_output/c02/ex12
+	mkdir $usr_out
 	printf " ${YELLOW}${UNDERLINE}ex12:\n${NOCOLOR}"
 	printf "= ex12 =\n==========================================\n" >> DEEPTHOUGHT
-	printf "${RED}This exercise is not supported yet.${NOCOLOR}\n"
-	printf "\nThis exercise is not supported yet.\n\n" >> DEEPTHOUGHT
+	if ! file_exists "src/c02/ex12/ft_print_memory.c" ; then
+		msg_nothing_turned_in "ex11/ft_print_memory.c"
+		return
+	fi
+	check_norme "src/c02/ex11/ft_print_memory.c"
+	check_prototype "void" "ft_print_memory" "src/c02/ex11/ft_print_memory.c"
+	if [ "$NORME" != "0" ] ; then
+		return
+	fi
+	compile_tests ./tests/c02/ex12/main.c ./src/c02/ex12/ft_print_memory.c 
+	if [ "$IS_COMPILED" != "0" ] ; then
+		printf "${uni_fail}ex11/ft_print_memory.c${diff_ko}${NOCOLOR}\n"
+		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
+		return
+	fi
+	cd $usr_out
+	local USER_OUTPUT=$(./user.out)
+	local RES="marvin \\07the\\08 bot\\09, \\0athe\\0b ship\\0c is\\0d in\\0a danger"
+	if [ "$USER_OUTPUT" == "$RES" ] ; then
+		printf "${uni_success}ex12/ft_print_memory.c${diff_ok}${NOCOLOR}\n"
+		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
+	else
+		printf "${uni_fail}ex12/ft_print_memory.c${diff_ko}${NOCOLOR}\n"
+		diff <(echo $RES) <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
+		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
+	fi
+	cd $current_dir
 }
+
 
 function	c02() {
 	mkdir src/c02 user_output/c02
@@ -657,6 +685,9 @@ function	c02() {
 	check_c02_ex11
 	check_c02_ex12
 	rm -rf $current_dir/user_output/c02 $current_dir/src/c02
-	printf "${GREEN}\nAll c02 tests are done.\n\n${NOCOLOR}"
-	printf "\n\nAll c02 tests are done.\n" >> DEEPTHOUGHT
+	printf "\n${NOCOLOR}"
+	printf "${YELLOW}==============================================="
+	printf "${YELLOW}\nType ${NOCOLOR}./gradme.sh ${YELLOW}Below To Run This Tester Again\n${NOCOLOR}"
+	printf "${YELLOW}===============================================\n${NOCOLOR}"
+	printf "\n\nAll c02 tests are done." >> DEEPTHOUGHT
 }

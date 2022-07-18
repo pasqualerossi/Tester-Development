@@ -140,18 +140,18 @@ function	check_c04_ex02() {
 	mkdir $usr_out
 	printf " ${YELLOW}${UNDERLINE}ex02:\n${NOCOLOR}"
 	printf "= ex02 =\n==========================================\n" >> DEEPTHOUGHT
-	if ! file_exists "src/c04/ex02/ft_putnbr.c" ; then
-		msg_nothing_turned_in "ex02/ft_putnbr.c"
+	if ! file_exists "src/c04/ex02/ft_list_at.c" ; then
+		msg_nothing_turned_in "ex02/ft_list_at.c"
 		return
 	fi
-	check_norme "src/c04/ex02/ft_putnbr.c"
-	check_prototype "void" "ft_putnbr" "src/c04/ex02/ft_putnbr.c"
+	check_norme "src/c04/ex02/ft_list_at.c"
+	check_prototype "void" "ft_list_at" "src/c04/ex02/ft_list_at.c"
 	if [ "$NORME" != "0" ] ; then
 		return
 	fi
-	compile_tests ./tests/c04/ex02/main.c ./src/c04/ex02/ft_putnbr.c 
+	compile_tests ./tests/c04/ex02/main.c ./src/c04/ex02/ft_list_at.c 
 	if [ "$IS_COMPILED" != "0" ] ; then
-		printf "${uni_fail}ex02/ft_putnbr.c\t\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex02/ft_list_at.c\t\t${diff_ko}${NOCOLOR}\n"
 		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
 		return
 	fi
@@ -160,10 +160,10 @@ function	check_c04_ex02() {
 	local TEST="0123456789"
 	local USER_OUTPUT=$(./user.out "$TEST")
 	if [ "$USER_OUTPUT" == "123456789" ] ; then
-		printf "${uni_success}ex02/ft_putnbr.c\t\t${diff_ok}${NOCOLOR}\n"
+		printf "${uni_success}ex02/ft_list_at.c\t\t${diff_ok}${NOCOLOR}\n"
 		printf "diff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_fail}ex02/ft_putnbr.c\t\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex02/ft_list_at.c\t\t${diff_ko}${NOCOLOR}\n"
 		diff <(echo "0123456789") <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
@@ -171,10 +171,10 @@ function	check_c04_ex02() {
 	local TEST="hey i'm dave"
 	local USER_OUTPUT=$(./user.out "$TEST")
 	if [ "$USER_OUTPUT" == "0" ] ; then
-		printf "${uni_success}ex02/ft_putnbr.c\t\t${diff_ok}${NOCOLOR}\n"
+		printf "${uni_success}ex02/ft_list_at.c\t\t${diff_ok}${NOCOLOR}\n"
 		printf "diff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_fail}ex02/ft_putnbr.c\t\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex02/ft_list_at.c\t\t${diff_ko}${NOCOLOR}\n"
 		diff <(echo "") <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
@@ -182,10 +182,10 @@ function	check_c04_ex02() {
 	local TEST="2147483647"
 	local USER_OUTPUT=$(./user.out "$TEST")
 	if [ "$USER_OUTPUT" == "$TEST" ] ; then
-		printf "${uni_success}ex02/ft_putnbr.c\t\t${diff_ok}${NOCOLOR}\n"
+		printf "${uni_success}ex02/ft_list_at.c\t\t${diff_ok}${NOCOLOR}\n"
 		printf "diff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_fail}ex02/ft_putnbr.c\t\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex02/ft_list_at.c\t\t${diff_ko}${NOCOLOR}\n"
 		printf "${RED}Your ft_putstr does not work with INT_MAX\n${NOCOLOR}"
 		diff <(echo "$TEST") <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "Your ft_putstr does not work with INT_MAX\n" >> $current_dir/DEEPTHOUGHT
@@ -278,18 +278,72 @@ function	check_c04_ex03() {
 }
 
 function	check_c04_ex04() {
-	printf " ${YELLOW}${UNDERLINE}ex04:\n${NOCOLOR}"
+	usr_out=$current_dir/user_output/c04/ex04
+	mkdir $usr_out
+	printf " ${YELLOW}ex04\n${NOCOLOR}"
 	printf "= ex04 =\n==========================================\n" >> DEEPTHOUGHT
-	printf "${RED}This exercise is not supported yet.${NOCOLOR}\n"
-	printf "\nThis exercise is not supported yet.\n\n" >> DEEPTHOUGHT
+	if ! file_exists "src/c04/ex04/ft_list_at_base.c" ; then
+		msg_nothing_turned_in "ex04/ft_list_at_base.c"
+		return
+	fi
+	check_norme "src/c04/ex04/ft_list_at_base.c"
+	check_prototype "void" "ft_list_at_base" "src/c04/ex04/ft_list_at_base.c"
+	if [ "$NORME" != "0" ] ; then
+		return
+	fi
+	compile_tests ./tests/c04/ex04/main.c ./src/c04/ex04/ft_list_at_base.c 
+	if [ "$IS_COMPILED" != "0" ] ; then
+		printf "${uni_fail}ex04/ft_list_at_base.c\t\t${diff_ko}${NOCOLOR}\n\n"
+		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
+		return
+	fi
+	cd $usr_out
+	./user.out > res.out
+	DIFF=$(diff res.out $current_dir/tests/c04/ex04/comb_res)
+	if [ "$DIFF" != "" ]; then
+		printf "${uni_fail}ex04/ft_list_at_base.c\t\t${diff_ko}${NOCOLOR}\n\n"
+		echo $DIFF >> $current_dir/DEEPTHOUGHT
+		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
+	else
+		printf "${uni_success}ex04/ft_list_at_base\t\t${diff_ok}${NOCOLOR}\n\n"
+		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
+	fi
+	cd $current_dir
 }
 
 function	check_c04_ex05() {
-	printf " ${YELLOW}${UNDERLINE}ex05:\n${NOCOLOR}"
-	printf "= ex05 =\n==========================================\n" >> DEEPTHOUGHT
-	printf "${RED}This exercise is not supported yet.${NOCOLOR}\n"
-	printf "\nThis exercise is not supported yet.\n\n" >> DEEPTHOUGHT
-	}
+	usr_out=$current_dir/user_output/c04/ex05
+	mkdir $usr_out
+	printf " ${YELLOW}ex04\n${NOCOLOR}"
+	printf "= ex04 =\n==========================================\n" >> DEEPTHOUGHT
+	if ! file_exists "src/c04/ex05/ft_atoi_base.c" ; then
+		msg_nothing_turned_in "ex05/ft_atoi_base.c"
+		return
+	fi
+	check_norme "src/c04/ex05/ft_atoi_base.c"
+	check_prototype "void" "ft_atoi_base" "src/c04/ex05/ft_atoi_base.c"
+	if [ "$NORME" != "0" ] ; then
+		return
+	fi
+	compile_tests ./tests/c04/ex05/main.c ./src/c04/ex05/ft_list_at_base.c 
+	if [ "$IS_COMPILED" != "0" ] ; then
+		printf "${uni_fail}ex05/ft_atoi_base.c\t\t${diff_ko}${NOCOLOR}\n\n"
+		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
+		return
+	fi
+	cd $usr_out
+	./user.out > res.out
+	DIFF=$(diff res.out $current_dir/tests/c04/ex05/comb_res)
+	if [ "$DIFF" != "" ]; then
+		printf "${uni_fail}ex05/ft_atoi.c\t\t${diff_ko}${NOCOLOR}\n\n"
+		echo $DIFF >> $current_dir/DEEPTHOUGHT
+		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
+	else
+		printf "${uni_success}ex05/ft_atoi_base\t\t${diff_ok}${NOCOLOR}\n\n"
+		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
+	fi
+	cd $current_dir
+}
 
 function	c04() {
 	mkdir src/c04 user_output/c04
@@ -303,6 +357,9 @@ function	c04() {
 	check_c04_ex04
 	check_c04_ex05
 	rm -rf $current_dir/user_output/c04 $current_dir/src/c04
-	printf "${GREEN}\nAll c04 tests are done.\n\n${NOCOLOR}"
-	printf "\n\nAll c04 tests are done.\n" >> DEEPTHOUGHT
+	printf "\n${NOCOLOR}"
+	printf "${YELLOW}==============================================="
+	printf "${YELLOW}\nType ${NOCOLOR}./gradme.sh ${YELLOW}Below To Run This Tester Again\n${NOCOLOR}"
+	printf "${YELLOW}===============================================\n${NOCOLOR}"
+	printf "\n\nAll c04 tests are done." >> DEEPTHOUGHT
 }

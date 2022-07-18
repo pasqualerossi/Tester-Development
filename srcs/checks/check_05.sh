@@ -140,18 +140,18 @@ function	check_c04_ex02() {
 	mkdir $usr_out
 	printf " ${YELLOW}${UNDERLINE}ex02:\n${NOCOLOR}"
 	printf "= ex02 =\n==========================================\n" >> DEEPTHOUGHT
-	if ! file_exists "src/c04/ex02/ft_putnbr.c" ; then
-		msg_nothing_turned_in "ex02/ft_putnbr.c"
+	if ! file_exists "src/c04/ex02/ft_list_at.c" ; then
+		msg_nothing_turned_in "ex02/ft_list_at.c"
 		return
 	fi
-	check_norme "src/c04/ex02/ft_putnbr.c"
-	check_prototype "void" "ft_putnbr" "src/c04/ex02/ft_putnbr.c"
+	check_norme "src/c04/ex02/ft_list_at.c"
+	check_prototype "void" "ft_list_at" "src/c04/ex02/ft_list_at.c"
 	if [ "$NORME" != "0" ] ; then
 		return
 	fi
-	compile_tests ./tests/c04/ex02/main.c ./src/c04/ex02/ft_putnbr.c 
+	compile_tests ./tests/c04/ex02/main.c ./src/c04/ex02/ft_list_at.c 
 	if [ "$IS_COMPILED" != "0" ] ; then
-		printf "${uni_fail}ex02/ft_putnbr.c\t\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex02/ft_list_at.c\t\t${diff_ko}${NOCOLOR}\n"
 		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
 		return
 	fi
@@ -160,10 +160,10 @@ function	check_c04_ex02() {
 	local TEST="0123456789"
 	local USER_OUTPUT=$(./user.out "$TEST")
 	if [ "$USER_OUTPUT" == "123456789" ] ; then
-		printf "${uni_success}ex02/ft_putnbr.c\t\t${diff_ok}${NOCOLOR}\n"
+		printf "${uni_success}ex02/ft_list_at.c\t\t${diff_ok}${NOCOLOR}\n"
 		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_fail}ex02/ft_putnbr.c\t\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex02/ft_list_at.c\t\t${diff_ko}${NOCOLOR}\n"
 		diff <(echo "0123456789") <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
@@ -171,10 +171,10 @@ function	check_c04_ex02() {
 	local TEST="hey i'm dave"
 	local USER_OUTPUT=$(./user.out "$TEST")
 	if [ "$USER_OUTPUT" == "0" ] ; then
-		printf "${uni_success}ex02/ft_putnbr.c\t\t${diff_ok}${NOCOLOR}\n"
+		printf "${uni_success}ex02/ft_list_at.c\t\t${diff_ok}${NOCOLOR}\n"
 		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_fail}ex02/ft_putnbr.c\t\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex02/ft_list_at.c\t\t${diff_ko}${NOCOLOR}\n"
 		diff <(echo "") <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
@@ -182,10 +182,10 @@ function	check_c04_ex02() {
 	local TEST="2147483647"
 	local USER_OUTPUT=$(./user.out "$TEST")
 	if [ "$USER_OUTPUT" == "$TEST" ] ; then
-		printf "${uni_success}ex02/ft_putnbr.c\t\t${diff_ok}${NOCOLOR}\n"
+		printf "${uni_success}ex02/ft_list_at.c\t\t${diff_ok}${NOCOLOR}\n"
 		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_fail}ex02/ft_putnbr.c\t\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex02/ft_list_at.c\t\t${diff_ko}${NOCOLOR}\n"
 		printf "${RED}Your ft_putstr does not work with INT_MAX\n${NOCOLOR}"
 		diff <(echo "$TEST") <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "Your ft_putstr does not work with INT_MAX\n" >> $current_dir/DEEPTHOUGHT

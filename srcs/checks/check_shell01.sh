@@ -187,7 +187,10 @@ function	shell01() {
 	check_sh01_ex06
 	check_sh01_ex07
 	check_sh01_ex08
-	printf "${GREEN}\nAll shell01 tests are done.\n\n${NOCOLOR}"
-        printf "\n\nAll shell01 tests are done.\n" >> DEEPTHOUGHT
-#	rm -rf src user_output
+	printf "\n${NOCOLOR}"
+	printf "${YELLOW}==============================================="
+	printf "${YELLOW}\nType ${NOCOLOR}./gradme.sh ${YELLOW}Below To Run This Tester Again\n${NOCOLOR}"
+	printf "${YELLOW}===============================================\n${NOCOLOR}"
+	printf "\n\nAll Shell01 tests are done." >> DEEPTHOUGHT
 }
+#	rm -rf src user_output

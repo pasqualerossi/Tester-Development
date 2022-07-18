@@ -414,6 +414,9 @@ function	c05() {
 	check_c05_ex08
 
 	rm -rf $current_dir/user_output/c05 $current_dir/src/c05
-	printf "${GREEN}\nAll c05 tests are done.\n\n${NOCOLOR}"
-	printf "\n\nAll c05 tests are done.\n" >> DEEPTHOUGHT
+	printf "\n${NOCOLOR}"
+	printf "${YELLOW}==============================================="
+	printf "${YELLOW}\nType ${NOCOLOR}./gradme.sh ${YELLOW}Below To Run This Tester Again\n${NOCOLOR}"
+	printf "${YELLOW}===============================================\n${NOCOLOR}"
+	printf "\n\nAll c05 tests are done." >> DEEPTHOUGHT
 }

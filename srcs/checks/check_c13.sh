@@ -1,23 +1,23 @@
 #!/bin/bash
 
-function	check_c00_ex00() {
-	usr_out=$current_dir/user_output/c00/ex00
+function	check_c13_ex00() {
+	usr_out=$current_dir/user_output/c13/ex00
 	mkdir $usr_out
 	printf " ${YELLOW}ex00\n${NOCOLOR}"
 	printf "= ex00 =\n==========================================\n" >> DEEPTHOUGHT
-	if ! file_exists "src/c00/ex00/ft_putchar.c" ; then
-		msg_nothing_turned_in "ex00/ft_putchar.c"
+	if ! file_exists "src/c13/ex00/btree_create_node.c" ; then
+		msg_nothing_turned_in "ex00/btree_create_node.c"
 		return
 	fi
-#	PROTOTYPE=$(grep -E "^$TYPE"$'\t{1,}'"$FUNC_NAME"'\([^)]+\)' src/c00/ex00/ft_putchar.c)
-	check_norme "src/c00/ex00/ft_putchar.c"
-	check_prototype "void" "ft_putchar" "src/c00/ex00/ft_putchar.c"
+#	PROTOTYPE=$(grep -E "^$TYPE"$'\t{1,}'"$FUNC_NAME"'\([^)]+\)' src/c13/ex00/btree_create_node.c)
+	check_norme "src/c13/ex00/btree_create_node.c"
+	check_prototype "void" "btree_create_node" "src/c13/ex00/btree_create_node.c"
 	if [ "$NORME" != "0" ] ; then
 		return
 	fi
-	compile_tests ./tests/c00/ex00/main.c ./src/c00/ex00/ft_putchar.c 
+	compile_tests ./tests/c13/ex00/main.c ./src/c13/ex00/btree_create_node.c 
 	if [ "$IS_COMPILED" != "0" ] ; then
-		printf "${uni_fail}ex00/ft_putchar.c\t\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex00/btree_create_node.c\t\t${diff_ko}${NOCOLOR}\n"
 		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
 		return
 	fi
@@ -25,33 +25,33 @@ function	check_c00_ex00() {
 	cd $usr_out
 	local USER_OUTPUT=$(./user.out)
 	if [ "$RES" != "$USER_OUTPUT" ]; then
-		printf "${uni_fail}ex00/ft_putchar.c\t\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex00/btree_create_node.c\t\t${diff_ko}${NOCOLOR}\n"
 		diff <(echo $RES) <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_success}ex00/ft_putchar.c\t\t${diff_ok}${NOCOLOR}\n\n"
+		printf "${uni_success}ex00/btree_create_node.c\t\t${diff_ok}${NOCOLOR}\n"
 		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
 	cd $current_dir
 }
 
-function	check_c00_ex01() {
-	usr_out=$current_dir/user_output/c00/ex01
+function	check_c13_ex01() {
+	usr_out=$current_dir/user_output/c13/ex01
 	mkdir $usr_out
 	printf " ${YELLOW}ex01\n${NOCOLOR}"
 	printf "= ex01 =\n==========================================\n" >> DEEPTHOUGHT
-	if ! file_exists "src/c00/ex01/ft_print_alphabet.c" ; then
-		msg_nothing_turned_in "ex01/ft_print_alphabet.c"
+	if ! file_exists "src/c13/ex01/btree_apply_prefix.c" ; then
+		msg_nothing_turned_in "ex01/btree_apply_prefix.c"
 		return
 	fi
-	check_norme "src/c00/ex01/ft_print_alphabet.c"
-	check_prototype "void" "ft_print_alphabet" "src/c00/ex01/ft_print_alphabet.c"
+	check_norme "src/c13/ex01/btree_apply_prefix.c"
+	check_prototype "void" "btree_apply_prefix" "src/c13/ex01/btree_apply_prefix.c"
 	if [ "$NORME" != "0" ] ; then
 		return
 	fi
-	compile_tests ./tests/c00/ex01/main.c ./src/c00/ex01/ft_print_alphabet.c 
+	compile_tests ./tests/c13/ex01/main.c ./src/c13/ex01/btree_apply_prefix.c 
 	if [ "$IS_COMPILED" != "0" ] ; then
-		printf "${uni_fail}ex01/ft_print_alphabet.c\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex01/btree_apply_prefix.c\t${diff_ko}${NOCOLOR}\n"
 		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
 		return
 	fi
@@ -59,33 +59,33 @@ function	check_c00_ex01() {
 	cd $usr_out
 	local USER_OUTPUT=$(./user.out)
 	if [ "$RES" != "$USER_OUTPUT" ]; then
-		printf "${uni_fail}ex01/ft_print_alphabet.c\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex01/btree_apply_prefix.c\t${diff_ko}${NOCOLOR}\n"
 		diff <(echo $RES) <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_success}ex01/ft_print_alphabet\t${diff_ok}${NOCOLOR}\n\n"
+		printf "${uni_success}ex01/btree_apply_prefix\t${diff_ok}${NOCOLOR}\n\n"
 		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
 	cd $current_dir
 }
 
-function	check_c00_ex02() {
-	usr_out=$current_dir/user_output/c00/ex02
+function	check_c13_ex02() {
+	usr_out=$current_dir/user_output/c13/ex02
 	mkdir $usr_out
 	printf " ${YELLOW}ex02\n${NOCOLOR}"
 	printf "= ex02 =\n==========================================\n" >> DEEPTHOUGHT
-	if ! file_exists "src/c00/ex02/ft_print_reverse_alphabet.c" ; then
-		msg_nothing_turned_in "ex02/ft_print_reverse_alphabet.c"
+	if ! file_exists "src/c13/ex02/btree_apply_infix.c" ; then
+		msg_nothing_turned_in "ex02/btree_apply_infix.c"
 		return
 	fi
-	check_norme "src/c00/ex02/ft_print_reverse_alphabet.c"
-	check_prototype "void" "ft_print_reverse_alphabet" "src/c00/ex02/ft_print_reverse_alphabet.c"
+	check_norme "src/c13/ex02/btree_apply_infix.c"
+	check_prototype "void" "btree_apply_infix" "src/c13/ex02/btree_apply_infix.c"
 	if [ "$NORME" != "0" ] ; then
 		return
 	fi
-	compile_tests ./tests/c00/ex02/main.c ./src/c00/ex02/ft_print_reverse_alphabet.c 
+	compile_tests ./tests/c13/ex02/main.c ./src/c13/ex02/btree_apply_infix.c 
 	if [ "$IS_COMPILED" != "0" ] ; then
-		printf "${uni_fail}ex02/ft_print_reverse_alphabet.c${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex02/btree_apply_infix.c${diff_ko}${NOCOLOR}\n"
 		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
 		return
 	fi
@@ -93,33 +93,33 @@ function	check_c00_ex02() {
 	cd $usr_out
 	local USER_OUTPUT=$(./user.out)
 	if [ "$RES" != "$USER_OUTPUT" ]; then
-		printf "${uni_fail}ex02/ft_print_reverse_alphabet.c${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex02/btree_apply_infix.c${diff_ko}${NOCOLOR}\n"
 		diff <(echo $RES) <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_success}ex02/ft_print_reverse_alphabet${diff_ok}${NOCOLOR}\n\n"
+		printf "${uni_success}ex02/btree_apply_infix${diff_ok}${NOCOLOR}\n\n"
 		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
 	cd $current_dir
 }
 
-function	check_c00_ex03() {
-	usr_out=$current_dir/user_output/c00/ex03
+function	check_c13_ex03() {
+	usr_out=$current_dir/user_output/c13/ex03
 	mkdir $usr_out
 	printf " ${YELLOW}ex03\n${NOCOLOR}"
 	printf "= ex03 =\n==========================================\n" >> DEEPTHOUGHT
-	if ! file_exists "src/c00/ex03/ft_print_numbers.c" ; then
-		msg_nothing_turned_in "ex03/ft_print_numbers.c"
+	if ! file_exists "src/c13/ex03/btree_apply_suffix.c" ; then
+		msg_nothing_turned_in "ex03/btree_apply_suffix.c"
 		return
 	fi
-	check_norme "src/c00/ex03/ft_print_numbers.c"
-	check_prototype "void" "ft_print_numbers" "src/c00/ex03/ft_print_numbers.c"
+	check_norme "src/c13/ex03/btree_apply_suffix.c"
+	check_prototype "void" "btree_apply_suffix" "src/c13/ex03/btree_apply_suffix.c"
 	if [ "$NORME" != "0" ] ; then
 		return
 	fi
-	compile_tests ./tests/c00/ex03/main.c ./src/c00/ex03/ft_print_numbers.c 
+	compile_tests ./tests/c13/ex03/main.c ./src/c13/ex03/btree_apply_suffix.c 
 	if [ "$IS_COMPILED" != "0" ] ; then
-		printf "${uni_fail}ex03/ft_print_numbers.c\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex03/btree_apply_suffix.c\t${diff_ko}${NOCOLOR}\n"
 		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
 		return
 	fi
@@ -127,33 +127,33 @@ function	check_c00_ex03() {
 	cd $usr_out
 	local USER_OUTPUT=$(./user.out)
 	if [ "$RES" != "$USER_OUTPUT" ]; then
-		printf "${uni_fail}ex03/ft_print_numbers.c\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex03/btree_apply_suffix.c\t${diff_ko}${NOCOLOR}\n"
 		diff <(echo $RES) <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_success}ex03/ft_print_numbers\t${diff_ok}${NOCOLOR}\n\n"
+		printf "${uni_success}ex03/btree_apply_suffix\t${diff_ok}${NOCOLOR}\n\n"
 		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
 	cd $current_dir
 }
 
-function	check_c00_ex04() {
-	usr_out=$current_dir/user_output/c00/ex04
+function	check_c13_ex04() {
+	usr_out=$current_dir/user_output/c13/ex04
 	mkdir $usr_out
 	printf " ${YELLOW}ex04\n${NOCOLOR}"
 	printf "= ex04 =\n==========================================\n" >> DEEPTHOUGHT
-	if ! file_exists "src/c00/ex04/ft_is_negative.c" ; then
-		msg_nothing_turned_in "ex04/ft_is_negative.c"
+	if ! file_exists "src/c13/ex04/btree_insert_data.c" ; then
+		msg_nothing_turned_in "ex04/btree_insert_data.c"
 		return
 	fi
-	check_norme "src/c00/ex04/ft_is_negative.c"
-	check_prototype "void" "ft_is_negative" "src/c00/ex04/ft_is_negative.c"
+	check_norme "src/c13/ex04/btree_insert_data.c"
+	check_prototype "void" "btree_insert_data" "src/c13/ex04/btree_insert_data.c"
 	if [ "$NORME" != "0" ] ; then
 		return
 	fi
-	compile_tests ./tests/c00/ex04/main.c ./src/c00/ex04/ft_is_negative.c 
+	compile_tests ./tests/c13/ex04/main.c ./src/c13/ex04/btree_insert_data.c 
 	if [ "$IS_COMPILED" != "0" ] ; then
-		printf "${uni_fail}ex04/ft_is_negative.c\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex04/btree_insert_data.c\t${diff_ko}${NOCOLOR}\n"
 		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
 		return
 	fi
@@ -166,13 +166,13 @@ function	check_c00_ex04() {
 		local USER_OUTPUT=$(./user.out ${NUMBER[$i]})
 		printf "> test $i with n=${NUMBER[i]}\n" >> $current_dir/DEEPTHOUGHT
 		if [ "$USER_OUTPUT" == "P" ] && [ ${NUMBER[i]} -gt 0 ]; then
-			printf "${uni_success}ex04/ft_is_negative.c\t${diff_ok}${NOCOLOR}\n\n"
+			printf "${uni_success}ex04/btree_insert_data.c\t${diff_ok}${NOCOLOR}\n\n"
 			printf "diff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 		elif [ "$USER_OUTPUT" == "N" ] && [ ${NUMBER[i]} -lt 0 ] ; then
-			printf "${uni_success}ex04/ft_is_negative.c\t${diff_ok}${NOCOLOR}\n\n"
+			printf "${uni_success}ex04/btree_insert_data.c\t${diff_ok}${NOCOLOR}\n\n"
 			printf "diff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 		else
-			printf "${uni_fail}ex04/ft_is_negative.c\t${diff_ko}${NOCOLOR}\n"
+			printf "${uni_fail}ex04/btree_insert_data.c\t${diff_ko}${NOCOLOR}\n"
 			printf "$USER_OUTPUT\n"
 			printf "diff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 		fi
@@ -181,23 +181,23 @@ function	check_c00_ex04() {
 	cd $current_dir
 }
 
-function	check_c00_ex05() {
-	usr_out=$current_dir/user_output/c00/ex05
+function	check_c13_ex05() {
+	usr_out=$current_dir/user_output/c13/ex05
 	mkdir $usr_out
 	printf " ${YELLOW}ex05\n${NOCOLOR}"
 	printf "= ex05 =\n==========================================\n" >> DEEPTHOUGHT
-	if ! file_exists "src/c00/ex05/ft_print_comb.c" ; then
-		msg_nothing_turned_in "ex05/ft_print_comb.c"
+	if ! file_exists "src/c13/ex05/btree_search_item.c" ; then
+		msg_nothing_turned_in "ex05/btree_search_item.c"
 		return
 	fi
-	check_norme "src/c00/ex05/ft_print_comb.c"
-	check_prototype "void" "ft_print_comb" "src/c00/ex05/ft_print_comb.c"
+	check_norme "src/c13/ex05/btree_search_item.c"
+	check_prototype "void" "btree_search_item" "src/c13/ex05/btree_search_item.c"
 	if [ "$NORME" != "0" ] ; then
 		return
 	fi
-	compile_tests ./tests/c00/ex05/main.c ./src/c00/ex05/ft_print_comb.c 
+	compile_tests ./tests/c13/ex05/main.c ./src/c13/ex05/btree_search_item.c 
 	if [ "$IS_COMPILED" != "0" ] ; then
-		printf "${uni_fail}ex05/ft_print_comb.c\t\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex05/btree_search_item.c\t\t${diff_ko}${NOCOLOR}\n"
 		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
 		return
 	fi
@@ -205,67 +205,67 @@ function	check_c00_ex05() {
 	cd $usr_out
 	local USER_OUTPUT=$(./user.out)
 	if [ "$RES" != "$USER_OUTPUT" ]; then
-		printf "${uni_fail}ex05/ft_print_comb.c\t\t${diff_ko}${NOCOLOR}\n"
+		printf "${uni_fail}ex05/btree_search_item.c\t\t${diff_ko}${NOCOLOR}\n"
 		diff <(echo $RES) <(echo $USER_OUTPUT) >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_success}ex05/ft_print_comb\t\t${diff_ok}${NOCOLOR}\n\n"
+		printf "${uni_success}ex05/btree_search_item\t\t${diff_ok}${NOCOLOR}\n\n"
 		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
 	cd $current_dir
 }
 
-function	check_c00_ex06() {
-	usr_out=$current_dir/user_output/c00/ex06
+function	check_c13_ex06() {
+	usr_out=$current_dir/user_output/c13/ex06
 	mkdir $usr_out
 	printf " ${YELLOW}ex06\n${NOCOLOR}"
 	printf "= ex06 =\n==========================================\n" >> DEEPTHOUGHT
-	if ! file_exists "src/c00/ex06/ft_print_comb2.c" ; then
-		msg_nothing_turned_in "ex06/ft_print_comb2.c"
+	if ! file_exists "src/c13/ex06/btree_level_count.c" ; then
+		msg_nothing_turned_in "ex06/btree_level_count.c"
 		return
 	fi
-	check_norme "src/c00/ex06/ft_print_comb2.c"
-	check_prototype "void" "ft_print_comb2" "src/c00/ex06/ft_print_comb2.c"
+	check_norme "src/c13/ex06/btree_level_count.c"
+	check_prototype "void" "btree_level_count" "src/c13/ex06/btree_level_count.c"
 	if [ "$NORME" != "0" ] ; then
 		return
 	fi
-	compile_tests ./tests/c00/ex06/main.c ./src/c00/ex06/ft_print_comb2.c 
+	compile_tests ./tests/c13/ex06/main.c ./src/c13/ex06/btree_level_count.c 
 	if [ "$IS_COMPILED" != "0" ] ; then
-		printf "${uni_fail}ex06/ft_print_comb2.c\t\t${diff_ko}${NOCOLOR}\n\n"
+		printf "${uni_fail}ex06/btree_level_count.c\t\t${diff_ko}${NOCOLOR}\n"
 		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
 		return
 	fi
 	cd $usr_out
 	./user.out > res.out
-	DIFF=$(diff res.out $current_dir/tests/c00/ex06/comb_res)
+	DIFF=$(diff res.out $current_dir/tests/c13/ex06/comb_res)
 	if [ "$DIFF" != "" ]; then
-		printf "${uni_fail}ex06/ft_print_comb2.c\t\t${diff_ko}${NOCOLOR}\n\n"
+		printf "${uni_fail}ex06/btree_level_count.c\t\t${diff_ko}${NOCOLOR}\n\n"
 		echo $DIFF >> $current_dir/DEEPTHOUGHT
 		printf "\ndiff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 	else
-		printf "${uni_success}ex06/ft_print_comb2\t\t${diff_ok}${NOCOLOR}\n\n"
+		printf "${uni_success}ex06/btree_level_count\t\t${diff_ok}${NOCOLOR}\n\n"
 		printf "\ndiff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 	fi
 	cd $current_dir
 }
 
-function	check_c00_ex07() {
-	usr_out=$current_dir/user_output/c00/ex07
+function	check_c13_ex07() {
+	usr_out=$current_dir/user_output/c13/ex07
 	mkdir $usr_out
 	printf " ${YELLOW}ex07\n${NOCOLOR}"
 	printf "= ex07 =\n==========================================\n" >> DEEPTHOUGHT
-	if ! file_exists "src/c00/ex07/ft_putnbr.c" ; then
-		msg_nothing_turned_in "ex07/ft_putnbr.c"
+	if ! file_exists "src/c13/ex07/btree_apply_by_level.c" ; then
+		msg_nothing_turned_in "ex07/btree_apply_by_level.c"
 		return
 	fi
-	check_norme "src/c00/ex07/ft_putnbr.c"
-	check_prototype "void" "ft_putnbr" "src/c00/ex07/ft_putnbr.c"
+	check_norme "src/c13/ex07/btree_apply_by_level.c"
+	check_prototype "void" "btree_apply_by_level" "src/c13/ex07/btree_apply_by_level.c"
 	if [ "$NORME" != "0" ] ; then
 		return
 	fi
-	compile_tests ./tests/c00/ex07/main.c ./src/c00/ex07/ft_putnbr.c 
+	compile_tests ./tests/c13/ex07/main.c ./src/c13/ex07/btree_apply_by_level.c 
 	if [ "$IS_COMPILED" != "0" ] ; then
-		printf "${uni_fail}ex07/ft_putnbr.c\t\t${diff_ko}${NOCOLOR}\n\n"
+		printf "${uni_fail}ex07/btree_apply_by_level.c\t\t${diff_ko}${NOCOLOR}\n\n"
 		printf "\ndiff ko :(\n\n" >> DEEPTHOUGHT
 		return
 	fi
@@ -277,10 +277,10 @@ function	check_c00_ex07() {
 		local USER_OUTPUT=$(./user.out ${NUMBER[$i]})
 		printf "> test $i with nb=${NUMBER[i]}\n" >> $current_dir/DEEPTHOUGHT
 		if [ "$USER_OUTPUT" == "${NUMBER[i]}" ] ; then
-			printf "${uni_success}ex07/ft_putnbr.c\t\t${diff_ok}${NOCOLOR}\n\n"
+			printf "${uni_success}ex07/btree_apply_by_level.c\t\t${diff_ok}${NOCOLOR}\n\n"
 			printf "diff ok :D\n\n" >> $current_dir/DEEPTHOUGHT
 		else
-			printf "${uni_fail}ex07/ft_putnbr.c\t\t${diff_ko}${NOCOLOR}\n\n"
+			printf "${uni_fail}ex07/btree_apply_by_level.c\t\t${diff_ko}${NOCOLOR}\n\n"
 			printf "$USER_OUTPUT\n"
 			printf "diff ko :(\n\n" >> $current_dir/DEEPTHOUGHT
 		fi
@@ -289,23 +289,23 @@ function	check_c00_ex07() {
 	cd $current_dir
 }
 
-function	c00() {
-	mkdir src/c00 user_output/c00
-	print_current_part "C00"
-	cp -r $src_path/c00/ex* ./src/c00  # copying src files
+function	c13() {
+	mkdir src/c13 user_output/c13
+	print_current_part "c13"
+	cp -r $src_path/c13/ex* ./src/c13  # copying src files
 	
-	check_c00_ex00
-	check_c00_ex01
-	check_c00_ex02
-	check_c00_ex03
-	check_c00_ex04
-	check_c00_ex05
-	check_c00_ex06
-	check_c00_ex07
-	rm -rf $current_dir/user_output/c00 $current_dir/src/c00
+	check_c13_ex00
+	check_c13_ex01
+	check_c13_ex02
+	check_c13_ex03
+	check_c13_ex04
+	check_c13_ex05
+	check_c13_ex06
+	check_c13_ex07
+	rm -rf $current_dir/user_output/c13 $current_dir/src/c13
 	printf "\n${NOCOLOR}"
 	printf "${YELLOW}==============================================="
 	printf "${YELLOW}\nType ${NOCOLOR}./gradme.sh ${YELLOW}Below To Run This Tester Again\n${NOCOLOR}"
 	printf "${YELLOW}===============================================\n${NOCOLOR}"
-	printf "\n\nAll c00 tests are done." >> DEEPTHOUGHT
+	printf "\n\nAll c13 tests are done." >> DEEPTHOUGHT
 }
