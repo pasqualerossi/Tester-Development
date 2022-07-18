@@ -26,6 +26,13 @@ source	srcs/checks/check_c03.sh
 source	srcs/checks/check_c04.sh
 source	srcs/checks/check_c05.sh
 source	srcs/checks/check_c06.sh
+source	srcs/checks/check_c07.sh
+source	srcs/checks/check_c08.sh
+source	srcs/checks/check_c09.sh
+source	srcs/checks/check_c10.sh
+source	srcs/checks/check_c11.sh
+source	srcs/checks/check_c12.sh
+source	srcs/checks/check_c13.sh
 
 #function	cleanup() {
 #	rm -rf src user_output
@@ -44,6 +51,13 @@ case $1 in
 	--c04 | -c04) init ; c04 ;;
 	--c05 | -c05) init ; c05 ;;
 	--c06 | -c06) init ; c06 ;;
+	--c07 | -c07) init ; c07 ;;
+	--c08 | -c08) init ; c08 ;;
+	--c09 | -c09) init ; c09 ;;
+	--c10 | -c10) init ; c10 ;;
+	--c11 | -c11) init ; c11 ;;
+	--c12 | -c12) init ; c12 ;;
+	--c13 | -c13) init ; c13 ;;
 	-a) init ; run_all ;;
 	*)
 #		man srcs/help ;;
