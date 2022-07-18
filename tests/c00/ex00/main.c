@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gpatingr <gpatingr@sudent.42.fr>           +#+  +:+       +#+        */
+/*   By: prossi <prossi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 23:57:27 by gpatingr          #+#    #+#             */
-/*   Updated: 2021/02/18 23:57:52 by gpatingr         ###   ########.fr       */
+/*   Updated: 2022/07/18 14:55:26 by prossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ int		main(void)
 {
 	int		i = 32;
 	while (i < 127)
-		ft_putchar(i++);
+		ft_create_elem(i++);
 	return (0);
 }

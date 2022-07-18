@@ -6,15 +6,14 @@
 /*   By: prossi <prossi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 23:57:27 by gpatingr          #+#    #+#             */
-/*   Updated: 2022/07/18 15:02:13 by prossi           ###   ########.fr       */
+/*   Updated: 2022/07/18 14:59:41 by prossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../header/user_functions.h"
 
-int		main(int ac, char **av)
+int main (int ac, char **av)
 {
 	(void)ac;
-	ft_list_at(atoi(av[1]));
-	return (0);
+	printf("%s", ft_list_push_back(av[1], av[2], av[3]));
 }

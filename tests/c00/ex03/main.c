@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gpatingr <gpatingr@sudent.42.fr>           +#+  +:+       +#+        */
+/*   By: prossi <prossi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 23:57:27 by gpatingr          #+#    #+#             */
-/*   Updated: 2021/02/18 23:57:52 by gpatingr         ###   ########.fr       */
+/*   Updated: 2022/07/18 14:56:58 by prossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int		main(void)
 {
-	ft_print_numbers();
+	ft_list_last();
 	return (0);
 }
