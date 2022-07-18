@@ -5,10 +5,12 @@ printf "${YELLOW}=====================
 THE 42 PISCINE TESTER
 =====================
 
+${NOCOLOR}Please Select a Module Below
+
 ${YELLOW}SHELL00 AND SHELL01
 	
-${YELLOW}Type${NOCOLOR} Shell00${YELLOW} To Test Your Shell00
-${YELLOW}Type${NOCOLOR} Shell01${YELLOW} To Test Your Shell01
+${YELLOW}Type${NOCOLOR} shell00${YELLOW} To Test Your Shell00
+${YELLOW}Type${NOCOLOR} shell01${YELLOW} To Test Your Shell01
  
 C00 TO C13
 
@@ -39,7 +41,7 @@ ${NOCOLOR}What Do You Want To Test?: "
 			shell01
 		elif [ "$REPLY" == "Both Shells" ] || [ "$REPLY" == "both shells" ] ; then
 			run_both_shells
-		elif [ "$REPLY" == "c00" ] || [ "$REPLY" == "c00" ] ; then
+		elif [ "$REPLY" == "c00" ] || [ "$REPLY" == "C00" ] ; then
 			c00
 		elif [ "$REPLY" == "c01" ] || [ "$REPLY" == "C01" ] ; then
 			c01
